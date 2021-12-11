@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --dark-c: #123;
+    --light-c: #fff;
+    --text-dark-c: var(--dark-c);
+    --text-light-c: var(--light-c);
+    --light-bg-c: rgba(255,255,255,0.3);
+}
+
+html.dark {
+    --light-c: #123;
+    --dark-c: #fff;
+    --text-dark-c: #fff;
+    --text-light-c: #123;
+    --light-bg-c: rgba(0,0,0,0.7);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: url('/bg.jpeg') center/cover;
+    backdrop-filter: blur(5px);
+}
+
+.container {
+    background-color: var(--light-bg-c);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    padding: 3rem;
+    color: var(--dark-c);
+}
+h1 {
+    text-align: center;
+}
+
+.bill-amount, .people-count {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 90%;
+}
+
+input#bill-amount, input#people-count, select {
+    border: none;
+    background-color: var(--dark-c);
+    border-radius: 10px;
+    color: var(--light-c);
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+input, select {
+    width: 90%;
+    margin: 5px auto;
+}
+
+input#bill-amount:focus, input#people-count:focus, select:focus {
+    outline: none;
+}
+
+datalist#service-rate {
+    color: var(--light-c);
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn {
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.calc-amt {
+    padding: 1rem;
+}
+
+.calc-amt h4 {
+    margin: 1.2rem auto;
+}
+
+.calc-amt.hidden {
+    display: none;
+}
+
